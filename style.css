@@ -4,9 +4,9 @@
 .welcome {
   margin-left:25%;
   background-color:#068c8e;
-  font-family:Georgia, serif;
+  font-family: Arial, Helvetica, sans-serif;
   text-align: center;
-  
+  padding:15px;
   color:rgb(28, 6, 6);
 } 
 /*headers in shadow text feature*/
@@ -77,6 +77,7 @@ li a:hover {
 /* echos div */
 .green-button {
   /* Existing button styles */
+  
   background-color: #068c8e;
   color: rgb(24, 12, 113);
   padding: 10px 20px;
@@ -109,15 +110,22 @@ li a:hover {
 }
 /* global div*/
 
-.global {
-  position: sticky;
-  z-index: 3; /* green box will be above black box & ITS NOT WORKING RIGHT!!!!*/
-  background:#068c8e; ;
-  width: auto;
-  padding: 20px;
-  top: 500px;
-  height: auto;
-  overflow: auto;
+
+ /* CSS media query for desktop devices */
+@media (min-width: 992px) {
+  .video-container {
+    width: 640px;
+    height: 480px;
+  }
+}
+
+/* CSS media query for mobile devices */
+@media (max-width: 991px) {
+  .video-container {
+    width: 220px;
+    height: 407px;
+  }
+ 
   
 }
 /* support div */
@@ -148,4 +156,28 @@ li a:hover {
   padding: 10px 20px;
   border: none;
   cursor: pointer;
+}
+/* Style the green-button2 container */
+.green-button2 {
+    background-color: green;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Style the links within the green-button2 container as buttons */
+.green-button2 a {
+    display: block;
+    margin: 5px 0;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Hover effect for the buttons */
+.green-button2 a:hover {
+    background-color: #005500;
 }

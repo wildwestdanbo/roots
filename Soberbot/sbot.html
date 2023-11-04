@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Add your necessary meta tags, CSS, and other head content here -->
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Roots of Addiction</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
-    <link rel="stylesheet" href="style.css">
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/c357e21ff1.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <nav>
-    <!-- Your navigation menu here -->
+  
 </nav>
 
 <main>
-    <!-- Your main content here -->
- <!-- Include the Dialogflow Messenger script -->
+    
   <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
   <style>
     df-messenger {
@@ -29,7 +28,7 @@
   </style>
 </head>
 <body>
-  <!-- Your existing chatbot code -->
+  
   <df-messenger
     project-id="tactile-sentry-398819"
     agent-id="8b73dfd7-87d9-42a5-b024-5c8b3becf5bc"
@@ -39,15 +38,15 @@
     </df-messenger-chat-bubble>
   </df-messenger>
 
-    <!-- Create a container for the WebGL animation -->
+
     <div id="webgl-container"></div>
 
-    <!-- Include the Three.js library -->
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>
 
-    <!-- Your WebGL animation code -->
+    
     <script>
-        // Your WebGL animation code here
+        
         const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
         const renderer = new THREE.WebGLRenderer();
@@ -55,18 +54,18 @@
         renderer.setSize(window.innerWidth, window.innerHeight);
         document.getElementById('webgl-container').appendChild(renderer.domElement);
 
-        // Create a transparent blue material
+        
         const material = new THREE.MeshBasicMaterial({
             color: 0x0000ff, // Blue color
             opacity: 0.9, // Set opacity value (0.0 to 1.0, where 0.0 is fully transparent and 1.0 is fully opaque)
             transparent: true, // Enable transparency
         });
 
-        // Create a cube with wireframe using LineSegments
+        
         const geometry = new THREE.BoxGeometry();
         const cube = new THREE.Mesh(geometry, material);
 
-        // Create wireframe lines for the cube
+        
         const wireframeGeometry = new THREE.TorusGeometry(2, 0.5, 16, 100);
         const wireframeMaterial = new THREE.LineBasicMaterial({
             color: 0x0000ff, // Wireframe color (blue)
@@ -88,14 +87,14 @@
         const animate = () => {
             requestAnimationFrame(animate);
 
-            // Move and rotate the cube around the screen
+            
             const time = Date.now() * 0.001;
             cube.position.x = Math.sin(time) * 2;
             cube.position.y = Math.cos(time) * 2;
             cube.rotation.x += 0.01;
             cube.rotation.y += 0.01;
 
-            // Rotate the wireframe lines
+            
             cubeWireframe.rotation.x += 0.02;
             cubeWireframe.rotation.y += 0.02;
 
